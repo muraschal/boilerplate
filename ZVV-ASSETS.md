@@ -25,7 +25,7 @@ Dieses Dokument beschreibt, wie Sie spezifische Assets (Schriftarten, Icons und 
 
 ## 🔤 Schriftarten herunterladen
 
-Um nur die ZVV-Schriftarten herunterzuladen, können Sie einen der folgenden Befehle verwenden:
+Um nur die benötigten ZVV-Schriftarten herunterzuladen, können Sie einen der folgenden Befehle verwenden:
 
 ### Methode 1: Temporäres Klonen und Kopieren
 
@@ -33,9 +33,13 @@ Um nur die ZVV-Schriftarten herunterzuladen, können Sie einen der folgenden Bef
 # Erstellen Sie ein Verzeichnis für die Schriftarten
 mkdir -p fonts/zvv
 
-# Klonen Sie das Repository temporär, kopieren Sie die Schriftarten und löschen Sie das Repository
+# Klonen Sie das Repository temporär, kopieren Sie nur die benötigten Schriftarten und löschen Sie das Repository
 git clone --depth 1 https://github.com/muraschal/boilerplate.git temp_boilerplate
-cp -r temp_boilerplate/assets/zvv/font/* fonts/zvv/
+# Nur die benötigten ZVV Brown Narrow Schriftdateien kopieren
+cp temp_boilerplate/assets/zvv/font/ZVVBrownNarrow-Regular.woff fonts/zvv/
+cp temp_boilerplate/assets/zvv/font/ZVVBrownNarrow-Regular.woff2 fonts/zvv/
+cp temp_boilerplate/assets/zvv/font/ZVVBrownNarrow-Bold.woff fonts/zvv/
+cp temp_boilerplate/assets/zvv/font/ZVVBrownNarrow-Bold.woff2 fonts/zvv/
 rm -rf temp_boilerplate
 ```
 
@@ -49,7 +53,11 @@ mkdir -p fonts/zvv
 git clone --depth 1 --filter=blob:none --sparse https://github.com/muraschal/boilerplate.git temp_boilerplate
 cd temp_boilerplate
 git sparse-checkout set assets/zvv/font
-cp -r assets/zvv/font/* ../fonts/zvv/
+# Nur die benötigten ZVV Brown Narrow Schriftdateien kopieren
+cp assets/zvv/font/ZVVBrownNarrow-Regular.woff ../fonts/zvv/
+cp assets/zvv/font/ZVVBrownNarrow-Regular.woff2 ../fonts/zvv/
+cp assets/zvv/font/ZVVBrownNarrow-Bold.woff ../fonts/zvv/
+cp assets/zvv/font/ZVVBrownNarrow-Bold.woff2 ../fonts/zvv/
 cd ..
 rm -rf temp_boilerplate
 ```
@@ -136,50 +144,43 @@ rm -rf temp_boilerplate
 
 ### Schriftarten einbinden
 
-Die ZVV-Schriftarten umfassen zwei Hauptfamilien:
-- **ZVV Brown Narrow S Web** - Die schmale Variante, optimiert für Benutzeroberflächen
-- **ZVV Brown Narrow Web** - Die Standardvariante
+Die ZVV-Schriftart umfasst:
+- **ZVV Brown Narrow** - Die offizielle Schriftart des ZVV in den Varianten Regular und Bold
 
-Für die einfachste Einbindung können Sie die mitgelieferte CSS-Datei verwenden:
-
-```html
-<link rel="stylesheet" href="fonts/zvv/stylesheet.css">
-```
-
-Alternativ können Sie die Schriftarten manuell in Ihrem CSS einbinden:
+Erstellen Sie eine eigene CSS-Datei für die Schriftarten:
 
 ```css
 @font-face {
-  font-family: 'ZVV Brown Narrow S Web';
-  src: url('fonts/zvv/ZVVBrownNarrowSWeb-Regular.woff2') format('woff2'),
-       url('fonts/zvv/ZVVBrownNarrowSWeb-Regular.woff') format('woff');
+  font-family: 'ZVV Brown Narrow';
+  src: url('fonts/zvv/ZVVBrownNarrow-Regular.woff2') format('woff2'),
+       url('fonts/zvv/ZVVBrownNarrow-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'ZVV Brown Narrow S Web';
-  src: url('fonts/zvv/ZVVBrownNarrowSWeb-Bold.woff2') format('woff2'),
-       url('fonts/zvv/ZVVBrownNarrowSWeb-Bold.woff') format('woff');
+  font-family: 'ZVV Brown Narrow';
+  src: url('fonts/zvv/ZVVBrownNarrow-Bold.woff2') format('woff2'),
+       url('fonts/zvv/ZVVBrownNarrow-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
 }
-
-/* Weitere Schriftschnitte nach Bedarf */
 ```
 
-Für optimale Ladezeiten sollten Sie die wichtigsten Schriftschnitte vorladen:
+Für optimale Ladezeiten sollten Sie die Schriftschnitte vorladen:
 
 ```html
-<link rel="preload" href="fonts/zvv/ZVVBrownNarrowSWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/zvv/ZVVBrownNarrowSWeb-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/zvv/ZVVBrownNarrow-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/zvv/ZVVBrownNarrow-Bold.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
 Verwendung in CSS:
 
 ```css
 body {
-    font-family: 'ZVV Brown Narrow S Web', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'ZVV Brown Narrow', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 h1, h2, h3 {
@@ -209,6 +210,7 @@ Die SVG-Icons können direkt in HTML eingebunden oder als Hintergrundbilder in C
 
 ## ℹ️ Hinweise
 
+- **Wichtig**: Verwenden Sie ausschließlich die "ZVV Brown Narrow" Schriftart in den Varianten Regular und Bold. Andere Schriftarten sind für ZVV-Projekte nicht relevant.
 - **Lizenz**: Die ZVV-Schriftarten sind Eigentum des ZVV und dürfen nur für autorisierte ZVV-Anwendungen verwendet werden. Für die Verwendung ist eine Lizenz erforderlich. Bitte kontaktieren Sie grafik@zvv.ch für weitere Informationen.
 - Die Pfade in den Beispielen müssen möglicherweise an Ihre Projektstruktur angepasst werden.
 - Für Windows-Benutzer: Verwenden Sie Git Bash oder passen Sie die Befehle entsprechend an. 

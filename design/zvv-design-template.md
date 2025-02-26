@@ -53,20 +53,20 @@ Ein spezialisiertes Design-System für ZVV-Anwendungen, basierend auf den offizi
 ## Typografie
 
 ### Schriftarten
-- **Primäre Schrift**: "ZVV Brown Narrow S Web", sans-serif
+- **Primäre Schrift**: "ZVV Brown Narrow", sans-serif
 - **Fallback**: Arial, sans-serif
 
 ### Schriftschnitte und -größen
 
-| Element          | Schriftschnitt                   | Größe        | Zeilenabstand |
-|------------------|----------------------------------|--------------|---------------|
-| Überschrift 1    | ZVV Brown Narrow S Web Bold     | 2rem (32px)  | 1.2           |
-| Überschrift 2    | ZVV Brown Narrow S Web Bold     | 1.5rem (24px)| 1.2           |
-| Überschrift 3    | ZVV Brown Narrow S Web Bold     | 1.25rem (20px)| 1.2          |
-| Fließtext        | ZVV Brown Narrow S Web Regular  | 1rem (16px)  | 1.5           |
-| Klein            | ZVV Brown Narrow S Web Regular  | 0.875rem (14px)| 1.5         |
-| Sehr klein       | ZVV Brown Narrow S Web Regular  | 0.75rem (12px)| 1.5          |
-| Hervorhebung     | ZVV Brown Narrow S Web Bold     | -            | -             |
+| Element          | Schriftschnitt                | Größe        | Zeilenabstand |
+|------------------|-------------------------------|--------------|---------------|
+| Überschrift 1    | ZVV Brown Narrow Bold        | 2rem (32px)  | 1.2           |
+| Überschrift 2    | ZVV Brown Narrow Bold        | 1.5rem (24px)| 1.2           |
+| Überschrift 3    | ZVV Brown Narrow Bold        | 1.25rem (20px)| 1.2          |
+| Fließtext        | ZVV Brown Narrow Regular     | 1rem (16px)  | 1.5           |
+| Klein            | ZVV Brown Narrow Regular     | 0.875rem (14px)| 1.5         |
+| Sehr klein       | ZVV Brown Narrow Regular     | 0.75rem (12px)| 1.5          |
+| Hervorhebung     | ZVV Brown Narrow Bold        | -            | -             |
 
 ## Abstände
 
@@ -135,31 +135,31 @@ Ein spezialisiertes Design-System für ZVV-Anwendungen, basierend auf den offizi
 ### Web-Einbindung
 ```css
 @font-face {
-    font-family: 'ZVV Brown Narrow S Web';
-    src: url('/fonts/ZVVBrownNarrowSWeb-Regular.woff2') format('woff2'),
-         url('/fonts/ZVVBrownNarrowSWeb-Regular.woff') format('woff');
+    font-family: 'ZVV Brown Narrow';
+    src: url('/fonts/ZVVBrownNarrow-Regular.woff2') format('woff2'),
+         url('/fonts/ZVVBrownNarrow-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'ZVV Brown Narrow S Web';
-    src: url('/fonts/ZVVBrownNarrowSWeb-Bold.woff2') format('woff2'),
-         url('/fonts/ZVVBrownNarrowSWeb-Bold.woff') format('woff');
+    font-family: 'ZVV Brown Narrow';
+    src: url('/fonts/ZVVBrownNarrow-Bold.woff2') format('woff2'),
+         url('/fonts/ZVVBrownNarrow-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 body {
-    font-family: 'ZVV Brown Narrow S Web', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'ZVV Brown Narrow', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 ```
 
 ### Performance-Optimierung
 ```html
-<link rel="preload" href="/fonts/ZVVBrownNarrowSWeb-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ZVVBrownNarrow-Regular.woff2" as="font" type="font/woff2" crossorigin>
 ```
 
 ### Hinweise
