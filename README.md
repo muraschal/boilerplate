@@ -15,6 +15,7 @@ Eine kuratierte Sammlung von bewährten Techstack-Konfigurationen und Design-Tem
 - [Schnellstart](#schnellstart)
 - [Verwendung mit KI-Assistenten](#verwendung-mit-ki-assistenten)
 - [Kombination von Templates](#kombination-von-templates)
+- [Assets](#assets)
 - [Beitragen](#beitragen)
 - [Lizenz](#lizenz)
 
@@ -60,13 +61,25 @@ Um mit einem Template zu beginnen:
 
 ## 🤖 Verwendung mit KI-Assistenten
 
-Diese Techstack-Templates können als Referenz für KI-Assistenten wie Claude verwendet werden. Um einen bestimmten Techstack in einem Gespräch zu referenzieren, können Sie folgende Syntax verwenden:
+Diese Techstack-Templates können als Referenz für KI-Assistenten wie Claude verwendet werden. Es gibt verschiedene Möglichkeiten, auf die Templates zu verweisen:
+
+### Gesamtes Repository
+
+Verwenden Sie diese Syntax, um auf das gesamte Repository zu verweisen:
+
+```
+@Codebase: github.com/muraschal/boilerplate
+```
+
+### Spezifisches Template
+
+Für ein bestimmtes Template können Sie direkt auf die entsprechende Datei verweisen:
 
 ```
 @Techstack: github.com/muraschal/boilerplate/templates/pwa-template.md
 ```
 
-Der Assistent kann dann die Spezifikationen des Techstacks berücksichtigen, wenn er bei der Entwicklung neuer Anwendungen hilft.
+Der Assistent kann dann die Spezifikationen des Techstacks oder des gesamten Repositories berücksichtigen, wenn er bei der Entwicklung neuer Anwendungen hilft.
 
 ## 🔄 Kombination von Templates
 
@@ -75,6 +88,12 @@ Die Templates können miteinander kombiniert werden, um maßgeschneiderte Lösun
 - **Design + Anwendung**: Das Minimalistische Design Template kann mit dem PWA oder Landing Page Template kombiniert werden
 - **Mehrere Anwendungs-Templates**: Kombinieren Sie Elemente aus verschiedenen Templates für komplexere Anwendungen
 - **Anpassung**: Alle Templates sind als Ausgangspunkt gedacht und können an spezifische Anforderungen angepasst werden
+
+## 🎨 Assets
+
+Dieses Repository enthält auch verschiedene Assets, die in Ihren Projekten verwendet werden können:
+
+- **ZVV Assets**: Schriftarten, Icons und Logos für ZVV-Anwendungen. Detaillierte Anweisungen zum Herunterladen und Verwenden dieser Assets finden Sie in der [ZVV-ASSETS.md](ZVV-ASSETS.md) Datei.
 
 ## 👥 Beitragen
 
