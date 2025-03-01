@@ -40,6 +40,7 @@ Dieses Repository dient als zentrale Referenz für bewährte Technologie-Stacks,
 ### Design-Templates
 
 - [**Minimalistisches Design Template**](design/minimal-design-template.md) - Ein klares, fokussiertes Design-System für moderne Webprojekte
+- [**Consulting-Webseite Template**](templates/consulting-webseite.md) - Ein modernes, responsives Template für Beratungsdienstleistungen
 
 ### Beispiel-Implementierungen
 
