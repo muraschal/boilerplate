@@ -40,7 +40,6 @@ Dieses Repository dient als zentrale Referenz für bewährte Technologie-Stacks,
 ### Design-Templates
 
 - [**Minimalistisches Design Template**](design/minimal-design-template.md) - Ein klares, fokussiertes Design-System für moderne Webprojekte
-- [**ZVV Design Template**](design/zvv-design-template.md) - Ein spezialisiertes Design-System für ZVV-Anwendungen mit detaillierten Farbpaletten und UI-Komponenten
 
 ### Beispiel-Implementierungen
 
@@ -108,3 +107,27 @@ Neue Techstack-Templates sind herzlich willkommen! So können Sie beitragen:
 ## 📄 Lizenz
 
 Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe die [LICENSE](LICENSE) Datei für Details.
+
+# Boilerplate Repository
+
+Dieses Repository enthält Ressourcen und Vorlagen für verschiedene Projekte.
+
+## Verfügbare Ressourcen
+
+### ZVV (Zürcher Verkehrsverbund)
+
+Alle ZVV-bezogenen Ressourcen wurden in eine strukturierte Organisation migriert:
+
+- [ZVV-Übersicht](zvv/README.md) - Startpunkt für alle ZVV-Ressourcen
+- [Design-Richtlinien](zvv/docs/design-guide.md) - Gestaltungsprinzipien für ZVV-Anwendungen
+- [Assets-Anleitung](zvv/docs/assets-guide.md) - Herunterladen und Verwenden von ZVV-Assets
+
+### ALPA.one
+
+Ressourcen für ALPA.one-Projekte:
+
+- [ALPA.one-Assets](alpa/) - Assets und Vorlagen für ALPA.one-Projekte
+
+## Verwendung
+
+Folgen Sie den spezifischen Anleitungen in den jeweiligen Bereichen, um die Ressourcen für Ihr Projekt zu verwenden.
